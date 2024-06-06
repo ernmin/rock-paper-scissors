@@ -15,9 +15,11 @@ function getComputerChoice(){
 
 //Write a function to get the player's input
 function getHumanChoice(){
-    
+    return prompt("Enter Rock, Paper or Scissors")
 }
 //Create humanScore variable and computerScore variable
+let humanScore = parseInt(0);
+let computerScore = parseInt(0);
 
 //Write a function called playRound that uses computer's choice and player's choice as arguments
     //Function should output the winner
