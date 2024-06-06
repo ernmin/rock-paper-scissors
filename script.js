@@ -50,7 +50,8 @@ function getHumanChoice(){
             }
         }
     }
-
+    
+//Write a function called playGame that calls playRound to play 5 rounds
 function playGame(){
     let result;
     for (let i = 1; i < 6; i++){
@@ -86,4 +87,4 @@ let computerScore = parseInt(0);
 playGame();
 
 
-//Write a function called playGame that calls playRound to play 5 rounds
+
