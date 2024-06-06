@@ -15,7 +15,14 @@ function getComputerChoice(){
 
 //Write a function to get the player's input
 function getHumanChoice(){
-    return prompt("Enter Rock, Paper or Scissors")
+    let answer = undefined;
+    while (true){
+        answer = prompt("Enter Rock, Paper or Scissors");
+        if (answer === 'Rock' || answer === 'Paper' || answer === 'Scissors' ){
+            break;
+        }
+    }
+    return answer
 }
 //Write a function called playRound that uses computer's choice and player's choice as arguments
     //Function should output the winner
