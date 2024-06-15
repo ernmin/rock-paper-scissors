@@ -27,37 +27,37 @@ function getHumanChoice(){
 //Write a function called playRound that uses computer's choice and player's choice as arguments
     //Function should output the winner
     //humanChoice should be case insensitive
-    function playRound(human, computer) {
-        human = human.toLowerCase();
-        if (human === computer){
-            return 'Tie'
+function playRound(human, computer) {
+    human = human.toLowerCase();
+    if (human === computer){
+        return 'Tie'
+    }
+    else if (human === 'rock') {
+        if(computer === 'paper'){
+            return 'Lose'
         }
-        else if (human === 'rock') {
-            if(computer === 'paper'){
-                return 'Lose'
-            }
-            else if (computer === 'scissors'){
-                return 'Win'
-            }
-        }
-        else if (human === 'paper'){
-            if (computer === 'rock'){
-                return 'Win'
-            }
-            else if (computer === 'scissors'){
-                return 'Lose'
-            }
-        }
-        else if (human === 'scissors'){
-            if (computer === 'paper'){
-                return 'Win'
-            }
-            else if (computer === 'rock'){
-                return 'Lose'
-            }
+        else if (computer === 'scissors'){
+            return 'Win'
         }
     }
-    
+    else if (human === 'paper'){
+        if (computer === 'rock'){
+            return 'Win'
+        }
+        else if (computer === 'scissors'){
+            return 'Lose'
+        }
+    }
+    else if (human === 'scissors'){
+        if (computer === 'paper'){
+            return 'Win'
+        }
+        else if (computer === 'rock'){
+            return 'Lose'
+        }
+    }
+}
+
 //Write a function called playGame that calls playRound to play 5 rounds
 function playGame(){
     let result;
@@ -90,6 +90,13 @@ function playGame(){
 //Create humanScore variable and computerScore variable
 let humanScore = parseInt(0);
 let computerScore = parseInt(0);
+
+//Create three buttons, ie. rock, paper, scissors
+
+//Use 'addEventListener' to the button to launch playRound but the button will give the input to the function.
+//Two buttons need to be pressed?
+//Display results by adding 'div'
+//Display running score and declare a winner if a player reaches 5 points
 
 playGame();
 
